@@ -1,0 +1,25 @@
+var moves = document.querySelectorAll(".page5_container");
+moves.forEach(element => {
+    element.addEventListener("mouseenter",function(){
+        element.childNodes[3].style.opacity=1
+        console.log(getBoundingClientRect().x)
+    })
+    element.addEventListener("mouseleave",function(){
+        element.childNodes[3].style.opacity=0;
+        console.log("object")
+    })
+    element.addEventListener("mousemove",function(dets){
+        gsap.to(element.childNodes[3],{
+            x:dets.x-element.getBoundingClientRect().x-83,
+            y:dets.y-element.getBoundingClientRect().y-200
+        })
+        
+    })
+});
+echo "# giwa" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/GOD694/giwa.git
+git push -u origin main
